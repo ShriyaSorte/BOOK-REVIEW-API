@@ -52,7 +52,7 @@ async function addreview(req,res,){
         }
         const review = {
             userid: req.params.id,
-            status: req.body.status,
+            review: req.body.review,
             rating: req.body.rating
         };
         console.log(req.body);
@@ -62,6 +62,7 @@ async function addreview(req,res,){
         res.status(201).send(book);
     } catch (error) {
         res.status(500).send(error);
+        console.log(error);
     }
 };
 
