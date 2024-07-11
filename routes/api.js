@@ -14,6 +14,7 @@ router.put('/updatebook/:id', bookController.updatebook);
 router.delete('/deletebook/:id', bookController.deletebook);
 
 // Review Routes
-
+router.post('/books/:id/reviews', bookController.addreview);
+router.get('/books/:id/reviews', bookController.getreview);
 
 module.exports = router;
